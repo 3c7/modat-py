@@ -1,0 +1,24 @@
+[project]
+name = "modat-py"
+version = "0.1.0"
+description = "Modat API Python client"
+readme = "README.md"
+authors = [
+    { name = "3c7", email = "3c7@posteo.de" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+modat = "modat_py:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+cli = [
+    "typer>=0.27.3",
+]
